@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 if문 연습3</title>
+		<script type="text/javascript">
+			const id = 'abcd';
+			let pw = '1234';
+			const answer = '서울';
+			
+			let inputId = prompt('아이디 입력');
+			let inputPw = prompt('비밀번호 입력');
+			
+			if(inputId == id && inputPw == pw) {
+				alert(id+'님 반값습니다.');
+				
+				let inputAns = prompt('대한민국의 수도는?');
+				if(inputAns == answer) {
+					document.write('정답입니다.');
+				}else {
+					document.write('틀렸습니다. 대한민국의 수도는 '+answer+'입니다.');
+				}
+			}else {
+				alert('아이디 또는 비밀번호가 일치하지 않습니다.');
+				document.write('종료합니다.');
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

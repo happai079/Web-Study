@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery 이벤트 연습</title>
+		<style type="text/css">
+			#btn {
+				width: 120px;
+				height: 50px;
+				border: none;
+				border-radius: 20px;
+				background-color: red;
+				color: white;
+				font-size: medium;
+			}
+		</style>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var colors = ['green', 'blue', 'red'];
+				var i = 0;
+				
+				$('#btn').click(function(){
+					$(this).css('background-color', colors[i++]);
+					if(i == colors.length) i = 0;
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button id="btn">클릭</button>
+	</body>
+</html>

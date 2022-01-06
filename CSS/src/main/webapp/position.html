@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>position</title>
+		<style>
+			#parent {
+				position: relative;
+				top:0px;
+				left:0px;
+				width: 200px;
+				height: 300px;
+				border: solid 5px #000;
+			}
+			#boxA, #boxB, #boxC {
+				width: 80px;
+				height: 80px;
+			}
+			#boxA {
+				background-color: red;			
+			}
+			#boxB {
+				/* relative: 원래 위치(static) 기준 */
+				/* absolute: 부모요소 기준, 부모가 static이면 브라우저 화면(body) 기준 */
+				position: absolute;
+				top: 20px;
+				left: 30px;
+				background-color: green;			
+			}
+			#boxC {
+				background-color: yellow;			
+			}
+		</style>
+	</head>
+	<body>
+		<div id="parent">
+			<div id="boxA">A</div>
+			<div id="boxB">B</div>
+			<div id="boxC">C</div>
+		</div>
+	</body>
+</html>

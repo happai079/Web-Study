@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 콜백 함수</title>
+		<script type="text/javascript">
+			var callback = function() {
+				alert('익명 함수입니다.');
+			}
+			
+			// 메게변수로 함수를 받음
+			function show(callback) {
+				callback();
+			}
+			
+			show(callback);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>미디어 쿼리 : orientation</title>
+		<style type="text/css">
+			@media screen and (orientation:portrait){		/* portrait : 세로 길이 중심의 경우 */
+				body { background-color:red; }
+			}
+		
+			@media screen and (orientation:landscape){		/* landscape : 가로 길이 중심의 경우 */
+				body { background-color:green; }
+			}
+			
+			* {margin:0; padding:0;}
+				div {
+					margin:0 auto;
+					width:50%;
+					max-width:420px; 
+				}
+				
+			img{
+				width:100%;
+				height:auto;
+				border:solid 1px; 
+			}
+	
+		</style>
+	</head>
+	<body>
+		<div><img src="image/사진.jpg"></div>		
+	</body>
+</html>

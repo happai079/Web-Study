@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트</title>
+		<style type="text/css">
+			div { margin:0 auto; width:600px; text-align:center;}
+			table {margin:0 auto; width:100%;}
+			td {width:50px; height:30px; text-align:center;} 
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				// 모든 <td> 요소 다 가져오기
+				var tdArr = document.getElementsByTagName('td');
+				
+				var setNumberBtn = document.getElementById('setNumberBtn');
+				var setColorBtn = document.getElementById('setColorBtn');
+				var clearNumberBtn = document.getElementById('clearNumberBtn');
+				var clearColorBtn = document.getElementById('clearColorBtn');
+				
+				// 셀에 번호 채우기 : 버튼 클릭 시 <td>에 i  값 출력
+				setNumberBtn.onclick = function (){
+					for(var i=0; i<tdArr.length; i++)
+						tdArr[i].innerHTML = i;
+				}
+				
+				// 셀에 색상 채우기 : 버튼 클릭 시 <td> 색상 표시 : 7가지 색상 출력
+				// red orange yellow green blue navy violet gold pink skyblue
+				// 색상을 배열로 생성
+				setColorBtn.onclick = function() {
+					var colors =["red", "orange", "yellow", "green", "blue", "navy", "purple"];
+	
+	                for(var i = 0; i < tdArr.length; i++){
+	                    tdArr[i].style.background = colors[i];
+	                }
+	            }
+				
+				// 셀의 번호 지우기 : 버튼 클릭 시 <td>의 숫자 삭제
+				clearNumberBtn.onclick = function() {
+	                for(var i = 0; i < tdArr.length; i++){
+	                    tdArr[i].innerHTML = "";
+	                }
+	            }
+				
+				// 셀의 색상 지우기 : 버튼 클릭 시 <td> 색상 제거
+				clearColorBtn.onclick = function() {
+	                for(var i = 0; i < tdArr.length; i++){
+	                    tdArr[i].style.background = ""; // "none"
+	                }
+	            }
+			};
+		</script>
+	</head>
+	<body>
+		<table border="1">
+			<tr>
+				<td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td>
+			</tr>
+		</table>
+		<br><br>
+		<button id="setNumberBtn">셀에 번호 채우기</button>
+		<button id="setColorBtn">셀에 색상 채우기</button>
+		<br><br>
+		<button id="clearNumberBtn">셀의 번호 지우기</button>
+		<button id="clearColorBtn">셀의 색상 지우기</button>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery each()</title>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('div').each(function(){
+					console.log($(this).text());
+				});
+				
+				$('div').each(function(index){
+					console.log($(this).text(index));
+				});
+				
+				// $.each(배열, 콜백함수)
+				var names = ['하하', '다다', '나나'];
+				$.each(names, function(index, value){
+					console.log(index+' : '+value);
+				});
+				
+				// $.each(객체, 콜백함수)
+				let car = {
+					no:'11가1111',
+					name:'소나타',
+					maker:'현대',
+					cc:2000,
+					year:2021
+				};
+				
+				$.each(car, function(prop, value){
+					console.log(prop + ' : ' + value);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div>a</div>
+		<div>b</div>
+		<div>c</div>
+	</body>
+</html>

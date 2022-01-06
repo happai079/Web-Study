@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 객체 생성 : 생성자 함수(function) 이용</title>
+		<script type="text/javascript">
+			// 생성자 함수를 이용하여 함수 정의
+			function People() {
+				// 멤버 변수 : 프로퍼티(속성)
+				this.name = '홍길동';
+				this.age = 21;
+				
+				// 메서드
+				this.getName = function() {
+					return this.name;
+				}
+			}
+			
+			// new 연산자를 사용하여 객체(인스턴스) 생성
+			var person = new People();
+			
+			console.log(person.name);
+			console.log(person.age);
+			console.log(person.getName());
+			
+			person.address = '서울';
+			person.getAddress = function() {
+				return this.address;
+			}
+			
+			console.log(person.getAddress())
+			
+			// 매개변수로 값 전달
+			function Book(title, author, price, date) {
+				this.title = title;
+				this.author = author,
+				this.price = price,
+				this.date = date;
+				
+				// 메서드
+				this.getBook = function() {
+					return this.title + " " + this.author + " " + this.price + " " + this.date; 
+				}
+			}
+			
+			var book = new Book('자바스크립트','홍길동',20000,'2021-12-13');
+			console.log(book.getBook())
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

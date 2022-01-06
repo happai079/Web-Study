@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 형변환</title>
+		<script type="text/javascript">
+/* 			var num1 = prompt("숫자1 입력");
+			var num2 = prompt("숫자2 입력");*/
+			
+			/* var num1 = parseInt(prompt("숫자1 입력"));
+			var num2 = parseInt(prompt("숫자2 입력")); */
+			
+			var num1 = Number(prompt("숫자1 입력"));		// 숫자형(소수점 유지)
+			var num2 = parseInt(prompt("숫자2 입력"));		// 정수형
+			
+			document.write(num1+'<br>');	// 문자열 더하기 : 형변환 하지 않음
+			document.write(num2);			// 곱하기 : 자동으로 형변환
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

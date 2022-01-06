@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery 속성 변경</title>
+		<style type="text/css">
+			div { width: 800px; margin: 0 auto;}
+			img { width: 200px; height: 100px; }
+		</style>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('img').each(function(index) {
+					$(this).hover(
+						function(){
+							$(this).attr('src', `image/img2-${index+1}.jpg`);
+						},
+						function(){
+							$(this).attr('src', `image/img1-${index+1}.jpg`);
+						}
+					)
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<img src="image/img1-1.jpg" id="img1"><img src="image/img1-2.jpg" id="img2"><img src="image/img1-3.jpg" id="img3"><img src="image/img1-4.jpg" id="img4">
+		</div>
+	</body>
+</html>

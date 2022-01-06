@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 setInterval()</title>
+		<script type="text/javascript">
+			function showTime() {
+				var now = new Date();
+				
+				var hour = now.getHours();
+				var minute = now.getMinutes();
+				var second = now.getSeconds();
+				var am = true;
+				
+				if(hour == 24) {
+					hour = 0;
+				}else if(hour >= 12) {
+					am = false;
+					if(hour > 12){
+						hour -= 12;
+					}
+				}
+				
+				var time = `${am ? '오전' : '오후'} 
+							${hour<10 ? `0${hour}` : hour}시 
+							${minute<10 ? `0${minute}` : minute}분 
+							${second<10 ? `0${second}` : second}초`;
+				
+				timeShow.innerHTML = time;
+			}
+		</script>
+	</head>
+	<body>
+		<button onClick="timerId = setInterval('showTime()',1000)">시간 출력</button>
+		<button onClick="clearInterval(timerId)">시간 정지</button>
+		<h2 id="timeShow"></h2>
+	</body>
+</html>

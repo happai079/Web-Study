@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>first-child 선택자</title>
+		<style type="text/css">
+			#content div {
+				width: 400px;
+				height: 50px;
+				border: solid 1px black;
+			}
+			#content div:first-child {
+				background-color:  red;	
+			}
+			#content div:first-child + div {
+				background-color:  yellow;	
+			}
+			#content div:nth-child(3) {
+				background-color:  blue;	
+			}
+			#content div:nth-child(4) {
+				background-color:  orange;	
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 array 연습2</title>
+		<style type="text/css">
+			td { 
+				width: 100px;
+				text-align: center;
+			 }
+		</style>
+		<script type="text/javascript">
+			var names = new Array(4);
+			
+			for(var i=0; i<names.length; i++){
+				names[i] = prompt('학생'+(i+1)+' 입력');
+			}
+			
+			document.write('<table border="1">');
+			
+			for(var i=0; i<names.length; i++){
+				document.write('<tr><td>'+ (i+1) +'</td><td>'+ names[i] +'</td></tr>');
+			}
+			
+			document.write('</table>');
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

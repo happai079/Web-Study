@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 Json</title>
+		<script type="text/javascript">
+			let car = {
+				no:'11가1111',
+				name:'소나타',
+				maker:'현대',
+				cc:2000,
+				year:2021
+			}
+			
+			var json = JSON.stringify(car);
+			console.log(json);
+			
+			var obj = JSON.parse(json);
+			console.log(obj);
+			console.log(obj.no);
+			console.log(obj.name);
+			
+			for(var i in obj) {
+				console.log(obj[i])
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

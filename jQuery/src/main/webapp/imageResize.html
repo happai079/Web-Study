@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery 이미지 크기 변경</title>
+		<style>
+			* { margin: 0; }
+			img { width: 100%; }
+		</style>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(window).on('resize', function(){
+					var winWidth = $(window).width();
+					var imgHeight = winWidth * 600 / 1920;
+					
+					$('#topImg').css({'width': winWidth, 'height': imgHeight});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="topImgBox"><img src="image/topImg.jpg" id="topImg"></div>
+	</body>
+</html>

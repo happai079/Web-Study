@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 window.open()2 새 창 만들기</title>
+		<script type="text/javascript">
+			function openWindow(){
+				window.open('windowOpen.html','bigWin',
+							'width=200, height=200, left=200, top=50, status=yes, scrollbars=yes, resizable=yes');
+			}
+			
+			function openNewWindow() {
+				var createWin = window.open('','newWin','width=400, height=150');
+				createWin.document.write('새로운 윈도우입니다.<br>');
+				createWin.document.write('<button onClick="window.close()">닫기</button>');
+			} 
+		</script>
+	</head>
+	<body>
+		<button onClick="openWindow()">이미지 열기</button>
+		<button onClick="openNewWindow()">새 창 열기</button>
+	</body>
+</html>

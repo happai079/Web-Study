@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">	
+		<title>Bootstrap Button</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery-3.6.0.min.js"></script>	
+		<script src="js/bootstrap.min.js"></script>
+		<style type="text/css">
+			.block { width: 50%; }
+		</style>
+	</head>
+	<body>
+		<!-- btn만 설정 / 클릭했을 때 테두리 표시 -->
+		<a class="btn" href="#">Link</a>
+		<button class="btn">Button</button>
+		<input type="button" class="btn" value="Input-Button">  
+		<input type="submit" class="btn" value="Input-Submit">  
+		<input type="reset" class="btn" value="Input-Reset">  
+		
+		<hr>
+		
+		<!-- 색상 설정 -->
+		<a class="btn btn-primary" href="#">Link</a>
+		<button class="btn btn-success">Button</button>
+		<input type="button" class="btn btn-warning" value="Input-Button">  
+		<input type="submit" class="btn btn-danger" value="Input-Submit">  
+		<input type="reset" class="btn btn-info" value="Input-Reset">
+		
+		<hr>
+		
+		<!-- 크기 설정(md:디폴트) -->
+		<a class="btn btn-primary btn-lg" href="#">lg</a>
+		<button class="btn btn-success btn-md">Md</button>
+		<button class="btn btn-success btn-mini">Mini</button>
+		<input type="button" class="btn btn-warning" value="default">  
+		<input type="submit" class="btn btn-danger btn-sm" value="sm">  
+		<input type="reset" class="btn btn-info btn-sm" value="sm">
+		
+		<hr>
+		
+		<!-- 테두리 설정 -->
+		<a class="btn btn-outline-primary" href="#">outline-primary</a>
+		<button class="btn btn-outline-dark">outline-dark</button>
+		<input type="button" class="btn btn-outline-light" value="outline-light">  
+		<input type="submit" class="btn btn-outline-danger" value="outline-danger">  
+		<input type="reset" class="btn btn-outline-info" value="outline-info">
+	
+		<hr>
+		
+		<a class="btn btn-link" href="#">Link</a>
+		
+		<hr>
+		
+		<!-- btn-block : 화면 크기에 꽉 차게 -->
+		<button type="button" class="btn btn-large btn-block btn-primary">Button Block</button>
+		<button type="button" class="btn btn-large btn-block">Button Block</button>
+		
+		<hr>
+		
+		<div class="block">
+			<button type="button" class="btn btn-large btn-block btn-primary">Button Block</button>
+			<button type="button" class="btn btn-large btn-block">Button Block</button>	
+		</div>
+	</body>
+</html>

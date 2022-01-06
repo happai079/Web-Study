@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery text()/html()</title>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				// 1. text() : 문자열만 반환
+				var aText = $('#a').text();
+				alert('text: ' + aText);
+				
+				// 2. html() : 태그 포함된 문자열 반환
+				var bHtml = $('#b').html();
+				alert('html: ' + bHtml);
+				
+				// 3. text(문자열) : <h1>을 문자열로 인식
+				 $('#a').text('<h1>jQuery</h1>'); 
+				
+				// 4. html(문자열) : <h1>을 태그로 인식
+				 $('#b').html('<h1>jQuery</h1>');
+			});
+		</script>
+	</head>
+	<body>
+		<div id="a"><h3>A</h3></div>
+		<div id="b"><h3>B</h3></div>
+	</body>
+</html>

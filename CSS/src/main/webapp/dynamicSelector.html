@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>동적 선택자</title>
+		<style>
+			.content div {
+				display:inline-block;
+				width: 100px;
+				height: 50px;
+				background:blue;
+			}
+			/* 마우스 올렸을 때 */
+			.content div:hover {
+				background:red;
+				cursor: pointer;
+			}
+			/* 클릭했을 때 */
+			.content div:active {
+				background:yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div></div><div></div><div></div><div></div>
+		</div>
+	</body>
+</html>

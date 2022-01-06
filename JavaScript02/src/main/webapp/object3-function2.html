@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 객체 생성 : 생성자 함수(function) 이용</title>
+		<script type="text/javascript">
+			// 생성자 함수를 이용하여 태그 객체 선언
+			function ListTag() {
+				this.ulTag = document.createElement('ul');
+				this.ulTag.type = 'square';
+				
+				for(let i=1; i<=5; i++) {
+					let listItem = document.createElement('li');
+					let itemInput = prompt('꽃'+i+' 입력');
+					
+					listItem.innerHTML = itemInput;
+					
+					this.ulTag.appendChild(listItem);
+				}
+
+				this.getListItem = function() {
+					return this.ulTag;
+				}
+			}
+			
+			// 객체 생성
+			window.onload = function() {
+				var list = new ListTag();
+				
+				var box = document.getElementById('box');
+				box.appendChild(list.getListItem());
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

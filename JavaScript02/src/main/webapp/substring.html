@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 String.substring()</title>
+		<script type="text/javascript">
+			var birth = prompt('생년월일 입력 예: 19990125');
+			
+			if(birth.length == 8){
+				var year = birth.substring(0,4);
+				var month = birth.substring(4,6);
+				var day = birth.substring(6,8);
+				
+				// 유효성 검사
+				if(month>12 && day>32)
+					alert('잘못된 입력입니다');
+				else 
+					document.write(`${year}년 ${month}월 ${day}일에 태어나셨군요.`);
+			}else{
+				alert('잘못된 입력입니다');
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

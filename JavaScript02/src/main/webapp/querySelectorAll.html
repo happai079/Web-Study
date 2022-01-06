@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 querySelectorAll() </title>
+		<script type="text/javascript">
+			window.onload = function() {
+				// 배열로 만들어짐
+				var headers = document.querySelectorAll('h1');
+				
+				for(var i=0; i<headers.length; i++){
+					
+					var header = headers[i];
+					
+					header.style.color = 'orange';                 // headers[i].style.color = 'orange';
+					header.style.background = 'skyblue';
+					header.innerHTML = 'JavaScript';	
+				}
+			};
+		
+		</script>
+	</head>
+	<body>
+		<h1>Header</h1>
+		<h1>Header</h1>
+		<h1>Header</h1>
+	</body>
+</html>

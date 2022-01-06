@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 객체 : new Object() 이용</title>
+		<script type="text/javascript">
+			var person = new Object();
+			
+			person.name = '홍길동';
+			person.age = 20;
+			person.getName = function() {
+				return this.name;
+			}
+			
+			console.log(person.getName());
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

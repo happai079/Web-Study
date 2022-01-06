@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 함수 연습2</title>
+		<script type="text/javascript">
+			var num; 
+			function input() {
+				num = prompt('숫자 입력');
+				show();
+			}
+			
+			function show() {
+				for(var i=1; i<=num; i++){
+					/* document.write('★');  - write()은 다시 씀*/
+					document.body.innerHTML += '★';  // body에 html을 추가
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button onClick="input()">숫자 입력</button>
+	</body>
+</html>

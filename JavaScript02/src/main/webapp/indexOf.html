@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 String.indexOf()</title>
+		<script type="text/javascript">
+			var input = prompt('이메일 입력');
+			var index1 = input.indexOf('@');
+			var index2 = input.indexOf('.');
+			
+			if(index1 == -1 || index2 == -1 || index1 > index2)
+				alert('이메일 형식이 아닙니다.');
+			else
+				document.write(`입력한 이메일 : ${input}`)
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

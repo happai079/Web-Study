@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 for문 연습3</title>
+		<style type="text/css">
+			th { background-color : yellow; }
+			td { width : 100px; }
+		</style>
+		<script type="text/javascript">
+			// table
+			document.write('<table border="1"><thead align="center">');
+			
+			// th
+			document.write('<th>i</th><th>sum</th>');
+			
+			// td
+			let sum = 0;
+			for(let i = 1; i <= 10; i++) {
+				sum += i;
+				document.write('<tr><td>'+ i +'</td><td>'+ sum +'</td></tr>');
+			}
+			
+			document.write('</thead></table>');
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

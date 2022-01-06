@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 디폴트 매개변수</title>
+		<script type="text/javascript">
+			function rect(width=10, height=20){
+				document.write(`width: ${width} `);
+				document.write(`height: ${height} <br>`);
+				return width * height;
+			}
+			
+			document.write(rect()+'<br>');
+			document.write(rect(30)+'<br>');
+			document.write(rect(100,200));
+			
+			document.write('<hr>')
+			
+			function showInfo(name, year=4, score){
+				document.write(`name: ${name} `);
+				document.write(`year: ${year} `);
+				document.write(`score: ${score} <br>`);
+			}
+			
+			showInfo()+'<br>';
+			showInfo('홍길동')+'<br>';
+			showInfo('홍길동',80); // name: 홍길동 year: 80 score: undefined -> 80이 두번째 인자로 전달됨
+			
+			document.write('<hr>')
+			
+			// 디폴트 매개변수는 맨 뒤에 위치
+			function showInfo2(name, score, year=4){
+				document.write(`name: ${name} `);
+				document.write(`year: ${year} `);
+				document.write(`score: ${score} <br>`);
+			}
+			
+			showInfo2()+'<br>';
+			showInfo2('홍길동')+'<br>';
+			showInfo2('홍길동',80); 
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

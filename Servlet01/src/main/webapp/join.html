@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>join</title>
+		<!-- <script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			/* 자바스크립트로 서블릿 요청 - jQuery 사용 */
+			$(function(){
+				$('#join').on('click',() =>{
+					let id = $('#user_id').val();
+					let pw = $('#user_pw').val();
+					let name = $('#user_nama').val();
+					let email = $('#user_email').val();
+					
+					if(id == "" || pw == ""){
+						alert("아이디와 비밀번호는 필수입니다.");
+						return false;
+					}else if(name == ""){
+						alert("성명을 입력해주세요.");
+					}else if(email == "") {
+						alert("이메일을 입력해주세요.")
+					}else {
+						$('#joinForm').attr({
+							method: 'post',
+							action: 'memberInsert'
+						}).submit();
+					}	
+				});
+			});
+		</script> -->
+	</head>
+	<body>
+		<h3>회원가입</h3>
+		<form name="joinForm" id="joinForm" action="memberInsert" method="post">
+			<table>
+				<tr>
+					<td>아이디</td>
+					<td><input type="text" id="user_id" name="user_id"></td>
+				</tr>
+				<tr>
+					<td>비밀번호</td>
+					<td><input type="password" id="user_pw" name="user_pw"></td>
+				</tr>
+				<tr>
+					<td>성명</td>
+					<td><input type="text" id="user_name" name="user_name"></td>
+				</tr>
+				<tr>
+					<td>이메일</td>
+					<td><input type="email" id="user_email" name="user_email"></td>
+				</tr>
+			</table>
+			<input type="submit" id="join" value="회원가입"><input type="reset" value="취소">
+		</form>
+	</body>
+</html>

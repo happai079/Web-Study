@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/* index.css */
+
+/* header */
+#headerBox {
+	height: 60px;
+	line-height: 60px;
+	padding: 0;
+}
+
+#logoBox {
+	float: left;
+	height: 60px;
+	line-height: 60px;
+}
+
+/* 윈도우 스크롤 시 메인 메뉴 고정 */
+.mainMenuFixed {
+	position: fixed;
+	top: 0px;
+}
+
+
+/* 메인 메뉴 아래에 그림자 표시 */
+.mainMenuShadow {
+	box-shadow: 0 3px 5px 0 gary;
+}

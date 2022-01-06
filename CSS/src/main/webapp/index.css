@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+#wrap {
+	margin: 0 auto;
+	width: 1000px;
+	background-color: white;
+	color: white;
+}
+
+header {
+	padding-right: 20px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #0C3;
+	text-align: right;
+}
+
+#mainMenuBox {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 35px;
+	line-height: 35px;
+	background-color: orange;
+	text-align: center;
+	color: #000;
+}
+
+#subMenuBox {
+	height: 35px;
+	line-height: 35px;
+	background-color: #ff0;
+	text-align: center;
+	color: #000;
+}
+
+#slidShowBox {
+	height: 200px;
+	line-height: 200px;
+	margin-top: 10px;
+	background-color: blue;
+	text-align: center;
+}
+
+#content {
+	height: 500px;
+	line-height: 500px;
+	margin-top: 10px;
+	background-color: navy;
+	text-align: center;
+}
+
+#compantInfo {
+	height: 200px;
+	line-height: 200px;
+	margin-top: 10px;
+	background-color: black;
+	text-align: center;
+}

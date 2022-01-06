@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 객체 : class 키워드 사용</title>
+		<script type="text/javascript">
+			class Person {
+				// 생성자
+				constructor(name, age) {
+					this.name = name;
+					this.age = age;
+				}
+				
+				// getter
+				// 프로퍼티 앞에 '_'붙임
+				get name() {
+					return this._name;
+				}
+
+				get age() {
+					return this._age;
+				}
+				
+				// setter
+				set name(name) {
+					this._name = name;
+				}
+
+				set age(age) {
+					this._age = age;
+				}
+				
+				// 메서드
+				toString() {
+					return this.name + '은 ' + this.age +'살 입니다.';
+				}
+			}
+			
+			// 객체 생성
+			let person1 = new Person('홍길동',20);
+			let person2 = new Person('이몽룡',25);
+			
+			// getter 호출 - getter/setter 호출시 괄호 안 붙임
+			console.log('성명: ' + person1.name + '\n나이: ' + person1.age);
+			console.log('성명: ' + person2.name + '\n나이: ' + person2.age);
+			
+			// toString() 메서드 호출
+			console.log(person1.toString());
+			console.log(person2.toString());
+			
+			// setter 호출
+			person1.age = 27;
+			console.log(person1.toString());
+			
+			person2.name = '성춘향';
+			person2.age = 30;
+			console.log(person2.toString());
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

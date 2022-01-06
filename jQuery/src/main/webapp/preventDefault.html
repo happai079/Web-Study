@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery preventDefault()</title>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#link').on('click', function(e){
+					e.preventDefault();
+					alert('일시적 이동 중지');
+				});
+				
+				// 문서상에서 오른쪽 마우스 클릭시
+				document.oncontextmenu = function(e){
+					e.preventDefault();
+					alert('오른쪽 마우스 클릭 금지');
+				};
+			});
+		</script>
+	</head>
+	<body>
+		<a href="https://www.naver.com" id="link">네이버로 이동</a>
+	</body>
+</html>

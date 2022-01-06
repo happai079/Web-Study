@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+#wrap {
+	margin: 0 auto; /* 내가 가운데 정렬 */
+	width: 800px; /* 가운데 정렬하기 위해서는 width값 있어야 함 */
+	text-align: center; /* 내 하위 요소 가운데 정렬 */
+}
+
+#mainMenuBox {
+	height: 35px;
+	line-height: 35px; /* 줄 간격 - 수직으로 가운데 정렬 효과 */
+	margin-top: 30px;
+	margin-bottom: 30px;
+	background-color: #555;
+}
+
+#mainMenuBox ul {
+	padding-left: 0;
+	maring: 0;
+	list-style: none;
+}
+
+#mainMenuBox li {
+	float: left; /* 한 줄로 정렬 */
+	text-align: center;
+	width: 25%; /* 각 항목을 동일한 너비로 */
+}
+
+#mainMenuBox a {
+	display: block; /* 여백 */
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#mainMenuBox a:hover {
+	color: red;
+	text-decoration: underline;
+	background: #000;
+}
+
+.product {
+	margin-bottom: 30px;
+}
+
+.product div {
+	display: inline-block;
+	margin: 10px;
+}
+
+.prdName {
+	color: blue;
+	font-weight: bold;
+}
+
+.prdPrice {
+	color: red;
+}
+
+.box {
+	display: inline-block;	/* 옆으로 나란히 배치 */
+	width: 320px;
+	height: 150px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 10px;
+	text-align: left;
+	border : solid 1px gray;
+	border-radius: 10px;
+}
+
+.box h4 {
+	text-decoration: underline;
+}
+
+.box a:hover {
+	color: red;
+}

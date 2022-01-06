@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 매게변수가 있는 함수</title>
+		<script type="text/javascript">
+			function calInterest(deposit, rate){
+				var interest = deposit * rate / 100;
+				document.write('예금이자 : ' + interest + '원');
+			}
+			
+			function input() {
+				var deposit = parsInt(prompt('예금액 입력'));
+				var rate = parsInt(prompt('이자율 입력'));
+				
+				calInterest(deposit, rate);
+			}
+ 		</script>
+	</head>
+	<body onLoad="input()">
+		
+	</body>
+</html>

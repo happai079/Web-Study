@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 콜백 함수2</title>
+		<script type="text/javascript">
+			let globalVar = 100;
+			
+			var show = function(localVar) {
+				document.write(`전역변수: ${globalVar} 지역변수: ${localVar}`);
+			}
+			
+			function call(callback) {
+				let localVar = 1;
+				callback(localVar);
+			}
+			
+			call(show);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS clear</title>
+		<style type="text/css">
+			#menu { list-style: none; padding: 0; margin-right: 20px;}
+			#menu li { float: right; margin-left: 5px;}
+			#p1 { clear:both; }
+			
+			#menu2 { list-style: none; padding: 0; margin-right: 20px;}
+			#menu2 li { float: right; margin-left: 5px;}
+			/* #menu2::after {
+				display: block;
+				content: '';
+				clear: both;
+			} */
+			.clearFix {
+				display: block;
+				content: '';
+				clear: both;
+			}
+			
+			#menu3 {
+				list-style: none; 
+				padding: 0;
+				height: 10px;
+				margin-right: 20px;
+			}
+			#menu3 li { float: right; margin-left: 5px;}
+		</style>
+	</head>
+	<body>
+		<!-- float 적용된 다음 요소에 clear 적용 -->
+		<div>
+			<ul id="menu">
+				<li>메뉴1</li>
+				<li>메뉴2</li>
+				<li>메뉴3</li>
+			</ul>
+			<p id="p1">메뉴 다음에 오는 요소</p>
+		</div>
+		
+		<hr>
+		
+		<!-- float 적용된 요소의 부모 요소에 clear 적용 -->
+		<div>
+			<ul id="menu2" class="clearFix">
+				<li>메뉴1</li>
+				<li>메뉴2</li>
+				<li>메뉴3</li>
+			</ul>
+			<p id="p2">메뉴 다음에 오는 요소</p>
+			
+		<hr>
+		
+		<!-- 부모 요소에 영역(height) 적용하면 상관없음 -->
+		<div>
+			<ul id="menu3">
+				<li>메뉴1</li>
+				<li>메뉴2</li>
+				<li>메뉴3</li>
+			</ul>
+			<p id="p3">메뉴 다음에 오는 요소</p>
+		</div>
+	</body>
+</html>

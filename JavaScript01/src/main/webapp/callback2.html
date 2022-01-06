@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 콜백 함수2</title>
+		<script type="text/javascript">
+			function endFunc(){
+				document.write('종료');
+			}
+			
+			function showName(name, callback) {
+				document.write('이름: ' + name + '<br>');
+				callback();
+			}
+			
+			showName('홍길동', endFunc);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

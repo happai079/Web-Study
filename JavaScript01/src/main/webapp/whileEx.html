@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 while문</title>
+		<script type="text/javascript">
+			var input = prompt('숫자 입력');
+			var i = 1;
+			
+			document.write(`<h2>총${input}개의 이미지 출력</h2>`)
+			while(i <= input) {
+				if(i % 3 == 1)
+					document.write('<img src="image/cherry.png">');
+				else if(i % 3 == 2)
+					document.write('<img src="image/bomb.png">');
+				else 
+					document.write('<img src="image/apple.png">');
+				i++;
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

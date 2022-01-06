@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 지역변수</title>
+		<script type="text/javascript">
+			function f1() {
+				// 지역변수 : 함수 내에서 var 붙인 변수
+				// 함수 내에서만 사용 가능
+				var localVar1 = 100;
+			}
+			
+			f1();
+			
+			// 함수 f1()에서 선언된 지역변수 사용 불가 : 오류 (not defined)
+			//document.write(localVar1 + "<br>");
+			
+			 function f2(){
+				// 전역변수 : 함수 내에서 var 안 붙이고 값 저장 변수
+				// 함수 밖에서도 사용 가능
+				localVar2 = 200;
+			}
+			
+			f2(); // 함수를 호출해서 변수에 값 저장시킨 후
+			document.write(localVar2 + "<br>");  // 출력
+			
+			
+			function f3(){
+				// 지역변수 : 함수내에서 let 붙인 변수
+				// 함수 내에서만 사용 가능
+				let localVar3 = 300;
+			}
+			
+			f3();
+			document.write(localVar3 + "<br>"); // 오류 localVar3 is not defined
+		</script>
+	</head>
+	<body>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	</body>
+</html>
